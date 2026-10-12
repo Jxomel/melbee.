@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" type="button">🎵 เปิดเพลง</button>
+
+    <!-- โค้ดเดิมของเว็บอยู่ตรงนี้ -->
+
+    <!-- หน้ารหัส -->
+<section id="passwordScreen" class="screen">
+
+    <p class="subtitle">จ๊ะเอ๋ มีไรมาให้เล่น 💗</p>
+
+    <h1>จำวันเกิดเราได้มั้ย ใส่เลย 🔐</h1>
+
+    <p>ใส่รหัส 4 หลักเพื่อเปิดเซอร์ไพรส์</p>
+
+    <div class="pin-display">
+        <span id="pin1">○</span>
+        <span id="pin2">○</span>
+        <span id="pin3">○</span>
+        <span id="pin4">○</span>
+    </div>
+
+    <div class="keypad">
+
+        <button onclick="pressNumber('1')">1</button>
+        <button onclick="pressNumber('2')">2</button>
+        <button onclick="pressNumber('3')">3</button>
+
+        <button onclick="pressNumber('4')">4</button>
+        <button onclick="pressNumber('5')">5</button>
+        <button onclick="pressNumber('6')">6</button>
+
+        <button onclick="pressNumber('7')">7</button>
+        <button onclick="pressNumber('8')">8</button>
+        <button onclick="pressNumber('9')">9</button>
+
+        <button onclick="clearPin()">⌫</button>
+        <button onclick="pressNumber('0')">0</button>
+        <button onclick="checkPin()">✓</button>
+
+    </div>
+
+    <p id="wrongPin"></p>
+
+</section>
+        <!-- หน้าซองจดหมาย -->
+        <section id="letterScreen" class="screen hidden">
+            <p class="subtitle">For You 💗</p>
+
+            <h1>พร้อมหรือยังงง</h1>
+            <p>เริ่มแล้วนะ</p>
+
+            <div class="envelope" id="envelope">
+                <div class="letter">
+                    <h2>แต่ว่า 💌</h2>
+                    <p>มีอะไรมาให้เล่น</p>
+                    <p>ตอบให้ถูกนะ</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="openBtn">OPEN 💗</button>
+                <button id="resetBtn">RESET</button>
+            </div>
+        </section>
+
+        <!-- หน้าคำถาม -->
+        <section id="quizScreen" class="screen hidden">
+            <h1>ตอบให้ถูกน้าา ตามหัวใจตัวเอง 💕</h1>
+            <p id="questionNumber">Question 1 / 5</p>
+
+            <div class="quiz-card">
+                <h2 id="questionText">พร้อมเล่นหรือยัง?</h2>
+                <div id="answerOptions"></div>
+            </div>
+
+            <button id="nextBtn">ต่อไป 💗</button>
+        </section>
+
+        <!-- หน้าสรุป -->
+        <section id="resultScreen" class="screen hidden">
+
+    <p class="subtitle">SURPRISE FOR YOU 💗</p>
+
+    <h1>เก่งจังงง💗💗</h1>
+
+    <img src="photo1.jpg" class="memory-photo">
+
+    <p id="scoreText">ขอบคุณที่เล่นจนจบนะ</p>
+
+    <button id="messageBtn" type="button">
+    เปิดข้อความ 💌
+</button>
+
+<div id="surpriseMessage" class="surprise-message hidden">
+
+    <h2>มีอะไรอยากบอก 💌</h2>
+
+    <p>
+        ขอบคุณที่เข้ามาเป็นส่วนหนึ่งในชีวิตนะ
+        ขอให้เรามีรอยยิ้มให้กันเยอะ ๆ
+        และมีช่วงเวลาดี ๆ ด้วยกันไปนาน ๆ 💗
+    </p>
+
+    <p class="big-heart">💗 💗 💗</p>
+
+    <button id="finalBtn" type="button">
+    มีอะไรอีกอย่าง... 💌
+</button>
+
+<div id="memoryGallery" class="memory-gallery hidden">
+
+    <h2>ความทรงจำของเรา 📸💗</h2>
+
+    <img id="galleryImage" src="photo1.jpg">
+
+    <p id="galleryText">รูปแรกของเรา 💕</p>
+
+    <div class="gallery-buttons">
+        <button id="prevPhoto">←</button>
+        <button id="nextPhoto">→</button>
+    </div>
+
+    <div id="galleryDots" class="gallery-dots"></div>
+
+</div>
+
+<div id="finalQuestion" class="final-question hidden">
+
+    <h2>คำถามสุดท้าย 💗</h2>
+
+    <p>ถ้ามีคนหนึ่งอยากขอให้เราเดินไปด้วยกันต่อ...</p>
+
+    <h1>จะให้โอกาสเขาไหม? 🥹</h1>
+
+    <div class="final-buttons">
+        <button id="yesBtn" type="button">ให้โอกาส 💗</button>
+        <button id="thinkBtn" type="button">ขอคิดก่อน 🙈</button>
+    </div>
+
+    <p id="finalAnswer"></p>
+
+</div>
+
+</div>
+
+    <button id="restartBtn">เล่นใหม่อีกครั้ง 🔄</button>
+
+</section>
+
+    </main>
+
+    <div id="hearts"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
