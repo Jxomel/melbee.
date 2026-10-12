@@ -982,22 +982,22 @@ function createHeartBurst() {
 const galleryImages = [
 
     {
-        src: "photo1.jpg",
+        src: "images/photo1.jpg",
         text: "รูปแรกของเรา 💕"
     },
 
     {
-        src: "photo2.jpg",
+        src: "images/photo2.jpg",
         text: "อีกหนึ่งความทรงจำดี ๆ 💗"
     },
 
     {
-        src: "photo3.jpg",
+        src: "images/photo3.jpg",
         text: "ช่วงเวลาดี ๆ ที่อยากเก็บไว้ ✨"
     },
 
     {
-        src: "photo4.jpg",
+        src: "images/photo4.jpg",
         text: "และยังมีอีกหลายความทรงจำเลย 💖"
     }
 
